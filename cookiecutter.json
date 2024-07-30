@@ -11,5 +11,6 @@
   "version": "0.1.0",
   "git_username": "@username",
   "python_version": "3.12",
-  "use_rich_console": ["yes", "no"]
+  "use_rich_console": ["no", "yes"],
+  "generate_docker_files": ["yes", "no"]
 }

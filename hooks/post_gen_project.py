@@ -19,4 +19,7 @@ def print_instructions():
     print("")
 
 if __name__ == '__main__':
+    if "{{ cookiecutter.generate_docker_files }}" == "no":
+        for filename in [".dockerignore", "docker-compose.yml", "docker_build.sh", "Dockerfile", "entrypoint.sh"]:
+            remove_file(filename)
     print_instructions()
