@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # GIT_REPO must contain URL to the repo in order to use docker push
+# URL set to GitHub by default; Will need to change for GitLab use.
 GIT_REPO="ghcr.io/{{ cookiecutter.project_slug }}"
 
 ask() {
