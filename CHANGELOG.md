@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## [0.1.3] - 2024-07-30
+### Changed
+- README.md: Improved instructions.  How do hyperlinks in Markdown work? :woozy:
+
+
 ## [0.1.2] - 2024-07-30
 ### Changed
 - README.md: Improved instructions for use.
