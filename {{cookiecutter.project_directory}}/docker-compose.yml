@@ -1,13 +1,12 @@
 ---
-version: "3"
 services:
   {{ cookiecutter.project_slug }}:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ghcr.io/{{ cookiecutter.project_slug }}/{{ cookiecutter.project_slug }}:latest
+    image: {{ cookiecutter.project_slug }}:latest
     environment:
       - LOG_LEVEL=${LOG_LEVEL}
       - LOG_PATH=${LOG_PATH}
     volumes:
-      - /tmp:/app/log:z
+      - /var/log/{{ cookiecutter.project_slug }}:/app/log:z
