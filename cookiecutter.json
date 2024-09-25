@@ -9,7 +9,7 @@
   "project_directory": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
   "project_url": "",
   "version": "0.1.0",
-  "git_username": "@username",
+  "git_username": "username",
   "python_version": "3.12",
   "use_rich_console": ["no", "yes"],
   "generate_docker_files": ["yes", "no"]

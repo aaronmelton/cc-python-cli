@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## [0.1.5] - 2024-09-25
+### Fixed
+- Somewhere along the line the file permissions got jacked up.  Removed
+  executable permissions off the files.
+### Changed
+- cookiecutter.json: Removed the @ symbol from the username to allow the
+  username to be specified elsewhere in code without prepending the @
+  which is only used for GitHub.
+
+
 ## [0.1.4] - 2024-09-17
 ### Changed
 - docker-compose.yml, docker_build.sh: Fixing labels for GitHub Container Registry.
