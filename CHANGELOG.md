@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## [0.1.6] - 2025-02-20
+### Fixed
+- pyproject.toml: Replaced "poetry.dev-dependencies" with
+  "poetry.group.dev.dependencies".
+- post_gen_project.py: Replaced "poetry shell" with eval $(poetry env activate)
+
+
 ## [0.1.5] - 2024-09-25
 ### Fixed
 - Somewhere along the line the file permissions got jacked up.  Removed

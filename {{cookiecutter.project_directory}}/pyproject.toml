@@ -9,7 +9,7 @@ python = "^{{ cookiecutter.python_version }}"
 aaron-common-libs = {git = "https://github.com/aaronmelton/aaron-common-libs.git"}
 {% if cookiecutter.use_rich_console == "yes" -%}rich = "^13.7.0"{%- endif %}
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 bandit = "^1.7.8"
 black = "^24.4.2"
 coverage = "^7.6.0"

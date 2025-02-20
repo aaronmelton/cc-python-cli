@@ -14,7 +14,7 @@ def print_instructions():
     print("")
     print("Run these commands to complete project creation:")
     print("1. cd {{ cookiecutter.project_name }}")
-    print("2. poetry shell")
+    print("2. eval $(poetry env activate)")
     print("3. poetry update")
     print("")
 
