@@ -1,4 +1,4 @@
-# !/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
 
@@ -8,12 +8,19 @@ PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
 
 
 def remove_file(filepath):
-    os.remove(os.path.join(PROJECT_DIRECTORY, filepath))
+    """Remove a file if it exists."""
+    try:
+        file_path = os.path.join(PROJECT_DIRECTORY, filepath)
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            print(f"Removed: {filepath}")
+    except OSError as e:
+        print(f"Warning: Could not remove {filepath}: {e}")
 
 def print_instructions():
     print("")
     print("Run these commands to complete project creation:")
-    print("1. cd {{ cookiecutter.project_name }}")
+    print("1. cd {{ cookiecutter.project_directory }}")
     print("2. eval $(poetry env activate)")
     print("3. poetry update")
     print("")

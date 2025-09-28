@@ -6,9 +6,11 @@
 
 import sys
 from time import perf_counter
+from typing import Any, Dict, Optional
 
 from aaron_common_libs.common_funcs import argument, cli, pretty_print, subcommand
 from aaron_common_libs.logger.custom_logger import CustomLogger
+
 from config import Config
 
 {% if cookiecutter.use_rich_console == "yes" -%}from rich.console import Console
@@ -30,10 +32,10 @@ logger_all = logging_handler.all
         argument("--test2", help="This is a test!", type=str, nargs=1, required=False),
     ]
 )
-def test(args):
+def test(args: Any) -> Dict[str, Any]:
     """Subcommand options for test operations."""
     logger.debug("args==%s", vars(args))
-    test_results = {}
+    test_results: Dict[str, Any] = {}
     if args.test1:
         test_results = {"foo": "bar"}
     if args.test2:
@@ -41,7 +43,7 @@ def test(args):
     return test_results
 
 
-def main():
+def main() -> Optional[int]:
     """Do Something."""
     start_time = perf_counter()
 
