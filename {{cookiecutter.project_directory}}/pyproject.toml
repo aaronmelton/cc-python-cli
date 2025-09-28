@@ -5,22 +5,23 @@ description = "{{ cookiecutter.project_description }}"
 authors = ["{{ cookiecutter.author }}"]
 
 [tool.poetry.dependencies]
-python = "^{{ cookiecutter.python_version }}"
+python = ">=3.12,<4.0"
 aaron-common-libs = {git = "https://github.com/aaronmelton/aaron-common-libs.git"}
-{% if cookiecutter.use_rich_console == "yes" -%}rich = "^13.7.0"{%- endif %}
+{% if cookiecutter.use_rich_console == "yes" -%}rich = "^13.9.4"{%- endif %}
 
 [tool.poetry.group.dev.dependencies]
-bandit = "^1.7.8"
-black = "^24.4.2"
-coverage = "^7.6.0"
-flake8 = "^7.1.0"
+bandit = "^1.8.0"
+black = "^24.10.0"
+coverage = "^7.6.9"
+flake8 = "^7.1.1"
 isort = "^5.13.2"
 pydocstyle = "^6.3.0"
-pylint = "^3.3.0"
-pytest = "^8.3.1"
-pytest-env = "^1.1.3"
-toml = "^0.10.2"
-Flake8-pyproject = "^1.2.3"
+pylint = "^3.3.1"
+pytest = "^8.3.3"
+pytest-env = "^1.1.5"
+flake8-pyproject = "^1.2.3"
+mypy = "^1.13.0"
+pre-commit = "^4.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -78,3 +79,12 @@ pythonpath = [".", "{{ cookiecutter.project_slug }}/"]
 env = ["LOG_LEVEL = DEBUG",
     "LOG_PATH = /tmp/",
     "API_KEY = test-s3cr3tk3y"]
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+check_untyped_defs = true
+disallow_untyped_decorators = true
